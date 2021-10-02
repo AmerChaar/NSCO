@@ -1,0 +1,13 @@
+mixin box-kira( obj )
+	.box-kira
+		span.icon.icon-md.text-gray-800(class=obj.icon)
+		h4.font-weight-bold: a(href='#')= obj.title
+		p.font-weight-light= obj.text
+
+
+mixin box-dina( obj )
+	.box-dina
+		.box-dina-img: +img( obj.img )
+		.box-dina-text
+			h4.box-dina-title: a(href='#')= obj.title
+			h6.box-dina-subtitle= obj.subtitle

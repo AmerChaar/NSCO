@@ -1,0 +1,11 @@
+//- Gallery classic
+mixin gallery-classic(obj)
+	// Gallery Classic
+	article.gallery-classic
+		.gallery-classic-figure: +img( obj.img )
+		.gallery-classic-text
+			h4.gallery-classic-title= obj.title
+			h6.gallery-classic-subtitle= obj.subtitle
+		.gallery-classic-caption
+		.gallery-classic-button: a.button.icon.linearicons-zoom-in(href='images/' + obj.imgOriginal + '.jpg' data-lightgallery='item'): +img( obj.img )
+

@@ -1,0 +1,309 @@
+extends ../_skeleton
+
+//- Includes
+include ../components/boxes
+include ../components/gallery
+
+
+block page
+	include ../sections/_header-classic
+
+
+	//Main Section
+	section.section.position-relative.bg-gray-800.block-left-main#home
+
+		.left-block
+			span.left-block-title Follow us
+			ul.left-block-list.line-decorative
+				li: a.link-white(href='#')
+					span.icon.fa.fa-facebook
+				li: a.link-white(href='#')
+					span.icon.fa.fa-instagram
+				li: a.link-white(href='#')
+					span.icon.fa.fa-twitter
+
+		.swiper-container.swiper-slider(data-loop='false' data-autoplay='5000' data-simulate-touch="false" data-slide-effect="fade")
+			.swiper-wrapper
+
+				.swiper-slide.context-dark( data-slide-bg='images/slide-img-01-1375x980.jpg' )
+					.swiper-slide-caption.section-xxl.block-left-custom
+						.container
+							.row.justify-content-xl-center.text-center.text-xl-left
+								.col-12.position-static
+									.slide-caption-img
+										+img('slide-img-small-01-470x740')
+								.col-xxl-7
+									h4.swiper-caption-subtitle(data-caption-animate='fadeInUp' data-caption-delay='100') Hangzhou, China
+									h1.swiper-caption-title(data-caption-animate='fadeInUp' data-caption-delay='250') 2100 Club
+									h6.swiper-caption-subtitle-2(data-caption-animate='fadeInUp' data-caption-delay='350') The world’s first blockchain bar
+									a.button.button-top.button-default-outline.button-icon.button-icon-right(href='#', data-caption-animate='fadeInUp' data-caption-delay='450' data-waypoint-to='#view-project' )
+										span.icon.mdi.mdi-chevron-right
+										| View Project
+
+				.swiper-slide.context-dark(data-slide-bg='images/slide-img-02-1375x980.jpg')
+					.swiper-slide-caption.section-xxl.block-left-custom
+						.container
+							.row.justify-content-xl-center.text-center.text-xl-left
+								.col-12.position-static
+									.slide-caption-img
+										+img('slide-img-small-02-470x740')
+								.col-xxl-7
+									h4.swiper-caption-subtitle(data-caption-animate='fadeInUp' data-caption-delay='100') Milan, Italy
+									h1.swiper-caption-title(data-caption-animate='fadeInUp' data-caption-delay='250') Villa Echo
+									h6.swiper-caption-subtitle-2(data-caption-animate='fadeInUp' data-caption-delay='350') Large 3-bedroom holiday villa
+									a.button.button-top.button-default-outline.button-icon.button-icon-right(href='#', data-caption-animate='fadeInUp' data-caption-delay='450' data-waypoint-to='#view-project')
+										span.icon.mdi.mdi-chevron-right
+										| View Project
+
+				.swiper-slide.context-dark(data-slide-bg='images/slide-img-03-1375x980.jpg')
+					.swiper-slide-caption.section-xxl.block-left-custom
+						.container
+							.row.justify-content-xl-center.text-center.text-xl-left
+								.col-12.position-static
+									.slide-caption-img
+										+img('slide-img-small-03-470x740')
+								.col-xxl-7
+									h4.swiper-caption-subtitle(data-caption-animate='fadeInUp' data-caption-delay='100') Cleveland, United States
+									h1.swiper-caption-title(data-caption-animate='fadeInUp' data-caption-delay='250') Museum
+									h6.swiper-caption-subtitle-2(data-caption-animate='fadeInUp' data-caption-delay='350') Rock and Roll Hall of Fame
+									a.button.button-top.button-default-outline.button-icon.button-icon-right(href='#', data-caption-animate='fadeInUp' data-caption-delay='450' data-waypoint-to='#view-project')
+										span.icon.mdi.mdi-chevron-right
+										| View Project
+
+			//Swiper Pagination
+			.swiper-pagination
+
+			//Swiper Navigation
+			.swiper-button-prev.fa-arrow-left
+			.swiper-button-next.fa-arrow-right
+
+			//Swiper Counter
+			.swiper-counter
+
+			//Swiper Scrollbar
+			.swiper-scrollbar.d-none.d-xl-block
+
+
+
+	//About Us
+	section.sectioon.section-lg.bg-default.bg-custom-gray#about
+		.container
+			.row.row-50.justify-content-lg-between
+
+				.col-lg-6
+					h6.subtitle-section.text-primary.wow.fadeInLeft(data-wow-delay='.1s') About us
+					h2.title-section.block-1.wow.fadeInLeft(data-wow-delay='.2s') We Turn Ideas Into Reality
+					p.text-gray-800.wow.fadeInLeft(data-wow-delay='.3s') We apply innovative design solutions to enhance people’s residential well-being and to help workplaces succeed & achieve more in the comfortable environments!
+					p.font-weight-light.wow.fadeInLeft(data-wow-delay='.4s') All our team collaborates with our clients, across all of our 3 offices, which are located throughout the US. Our mission is to implement the outstanding design ideas and solutions for any project we’re working on. During that process, we carefully combine client’s guidelines, technical possibilities as well as the environmental issues. Engineering and interior design solutions that we deliver are usually born after a collaborative process.
+					.row.row-40.text-center.text-lg-left.box-nina-wrapper
+						.col-sm-4.box-nina.wow.fadeInUp(data-wow-delay='.2s')
+							.box-nina-icon
+								span.icon.icon-lg.text-gray-800.linearicons-apartment
+							h6.box-nina-title: a(href='#') Architecture
+						.col-sm-4.box-nina.wow.fadeInUp(data-wow-delay='.2s')
+							.box-nina-icon.mod-2
+								span.icon.icon-lg.text-gray-800.linearicons-chair
+							h6.box-nina-title: a(href='#') Interiors
+						.col-sm-4.box-nina.wow.fadeInUp(data-wow-delay='.2s')
+							.box-nina-icon
+								span.icon.icon-lg.text-gray-800.linearicons-compass
+							h6.box-nina-title: a(href='#') Planning
+
+				.col-lg-4.col-xxl-3.offset-top-lg-120.text-center.text-lg-left
+					.text-img: span.counter 17
+					.box-counter-text.inset-left-lg-30
+						h2.title-section-2.wow.fadeInRight(data-wow-delay='.3s') Years
+						h6.subtitle-section-2.text-gray-800.wow.fadeInRight(data-wow-delay='.3s') Of Successful work<br class='d-none d-lg-block'> in the market
+
+
+	//Our Services
+	section.sectioon.section-lg.section-lg-bottom.bg-default#our-services
+		.container
+			.row.row-30.no-gutters.justify-content-center
+
+				.col-lg-6
+					.text-center.text-lg-left
+						h6.subtitle-section.text-primary.wow.fadeInUp(data-wow-delay='.1s') Our Services
+						h2.title-section.block-2.wow.fadeInUp(data-wow-delay='.2s') Construction Solutions
+					.block-3.img-offset-top
+						+img('index-img-01-585x585').wow.fadeInLeft(data-wow-delay='.1s')
+
+				.col-lg-6.wow.fadeInRight(data-wow-delay='.1s')
+					.box-zita-wrapper
+						.box-zita
+							p The first thing we do is meeting with our clients and talk through their goals on a future project. During this meeting, feel free to communicate your ideas and ask lots of questions. This stage is highly decisive as you can evaluate the work of your potential architect by browsing their portfolio.
+						.box-zita.bg-primary
+							h4.box-zita-title We focus on the problem, the question and the solution. And we always think ahead.
+
+			.row.no-gutters
+				.col-sm-6.wow.fadeIn(data-wow-delay='.2s')
+					+box-kira({
+						icon: 'linearicons-wall2',
+						title: 'Construction Services',
+						text: 'Our customers love the pace/quality tempo that we show during each of the principal construction processes! We\'re comfortable with any idea of our clients.'
+					})
+				.col-sm-6.wow.fadeIn(data-wow-delay='.2s')
+					+box-kira({
+						icon: 'linearicons-city',
+						title: 'Construction Management',
+						text: 'Our project management is essential. We\'re using the most time and iterations efficient life cycles methods for that to complete all the projects on time.'
+					})
+				.col-sm-6.wow.fadeIn(data-wow-delay='.4s')
+					+box-kira({
+						icon: 'linearicons-pencil-ruler2',
+						title: 'Design-Build',
+						text: 'If a project is not too complex, we may hire a designer-builder type of contractor, to make the longevity of the construction shorter.'
+					})
+				.col-sm-6.wow.fadeIn(data-wow-delay='.4s')
+					+box-kira({
+						icon: 'linearicons-pencil5',
+						title: 'General Contracting',
+						text: 'We have a long list of professional contractors, whom our engineers and architects enjoy to work with on a majority of our construction projects!'
+					})
+
+
+	//Gallery
+	section.section#projects
+		.container-fluid.wow.fadeInUp(data-wow-delay='.3s')
+			.isotope-wrap#view-project
+				.row.row-condensed.no-gutters.isotope(data-isotope-layout='masonry', data-column-class='.col-1', data-isotope-group='gallery-02', data-lightgallery='group')
+					.col-1.isotope-item.isotope-sizer
+					.col-sm-6.col-xl-3.isotope-item.offset-top-2
+						+gallery-classic({
+							lightGallery: 'item',
+							img: 'gallery-img-01-480x780',
+							imgOriginal: 'gallery-img-original-01-1200x800',
+							title: 'Hangzhou, China',
+							subtitle: 'project management'
+						})
+
+					.col-sm-6.col-xl-3.isotope-item.offset-top-2
+						+gallery-classic({
+							lightGallery: 'item',
+							img: 'gallery-img-02-480x780',
+							imgOriginal: 'gallery-img-original-02-1200x800',
+							title: 'Los Angeles, United States',
+							subtitle: 'Architectural services'
+						})
+
+					.col-sm-6.col-xl-3.isotope-item.offset-top-2
+						+gallery-classic({
+							lightGallery: 'item',
+							img: 'gallery-img-03-480x780',
+							imgOriginal: 'gallery-img-original-03-800x1200',
+							title: 'Montreal, Canada',
+							subtitle: 'Pre-construction'
+						})
+
+					.col-sm-6.col-xl-3.isotope-item.offset-top-2
+						+gallery-classic({
+							lightGallery: 'item',
+							img: 'gallery-img-04-480x780',
+							imgOriginal: 'gallery-img-original-04-1200x800',
+							title: 'Reggio Emilia, Italy',
+							subtitle: 'Facade engineering'
+						})
+
+			.text-center.button-top-2
+				a.button.button-primary-outline.wow.fadeInUp(href='#', data-wow-delay='2.s') View All Projects
+
+
+	//Our Team
+	section.section.section-lg.section-collapse.bg-default
+		.container
+			.row.row-30.justify-content-center
+
+				.col-md-6
+					.row.row-30
+						.col-lg-12
+							.text-center.text-md-left
+								h6.subtitle-section.text-primary.wow.fadeInLeft(data-wow-delay='.1s') Our Team
+								h2.title-section.wow.fadeIneft(data-wow-delay='.2s') Meet our<br class='d-none d-xl-block'> team members
+							.offset-top-3.wow.fadeInLeft(data-wow-delay='.2s')
+								+box-dina({
+									img: 'box-dina-img-01-570x670',
+									title: 'Steven Hodges',
+									subtitle: 'Founder / Architect'
+								})
+						.col-md-12.wow.fadeInLeft(data-wow-delay='.2s')
+							+box-dina({
+								img: 'box-dina-img-03-570x670',
+								title: 'Emma Collins',
+								subtitle: 'Engineer'
+							})
+
+				.col-md-6
+					.row.row-30
+						.col-md-12.wow.fadeInRight(data-wow-delay='.2s')
+							+box-dina({
+								img: 'box-dina-img-02-570x670',
+								title: 'Anna Miller',
+								subtitle: 'lead Interior designer'
+							})
+						.col-md-12.wow.fadeInRight(data-wow-delay='.2s')
+							+box-dina({
+								img: 'box-dina-img-04-570x670',
+								title: 'Phillip Bennett',
+								subtitle: 'Building contractor'
+							})
+
+
+	//Get in Touch
+	section.section.section-lg.section-collapse.section-size.bg-default#contact-us
+		.container
+			.row.justify-content-center
+
+				.col-md-10.col-lg-8
+					.text-center
+						h6.subtitle-section.text-primary.wow.fadeIn(data-wow-delay='.1s') Contact Our Team
+						h2.title-section.ls-1.wow.fadeIn(data-wow-delay='.2s') Get in Touch
+						p Looking forward to building your own residential or commercial property? Feel free to contact<br class='d-none d-xl-block'> us using the form below to discuss additional details of your project with our managers so<br class='d-none d-xl-block'> that our team could get started with your project right away.
+						form.rd-form.rd-mailform(data-form-output='form-output-global', data-form-type='contact', method='post', action='bat/rd-mailform.php')
+							.row.row-40.wow.fadeIn(data-wow-delay='.3s')
+								.col-12
+									h4.font-weight-bold Name
+									.form-wrap
+										input#contact-first-name.form-input(type='text', name='name', data-constraints='@Required')
+										label.form-label(for='contact-first-name') Type your name here
+								.col-12
+									h4.font-weight-bold Email
+									.form-wrap
+										input#contact-email.form-input(type='email', name='email', data-constraints='@Email @Required')
+										label.form-label(for='contact-email') Type your email here
+								.col-12
+									h4.font-weight-bold Message
+									.form-wrap.form-wrap-textarea
+										label.form-label(for='contact-message') Type your message here
+										textarea#contact-message.form-input(name='message' data-constraints='@Required')
+								.col-12.text-center
+									button.button.button-primary.button-icon.button-icon-right(type='submit')
+										span.icon.mdi.mdi-chevron-right
+										| Send
+
+	//Let’s Work Together!
+	section.section.section-md.bg-primary
+		.container
+			.row.no-gutters.row-30.justify-content-lg-between.align-items-lg-center.text-center.text-lg-left
+
+				.col-lg-9.wow.fadeInRight(data-wow-delay='.3s')
+					h2.title-section.ls-2 Construction of Any Complexity
+					h6.subtitle-section-3 Trust our team with your next project
+
+				.col-lg-3.text-lg-right.wow.fadeInLeft(data-wow-delay='.3s')
+					a.button.button-lg.button-gray-800(href='#') Get Started
+
+
+	//Our Clients
+	section.section.section-lg.section-lg-2-bottom.context-dark.bg-gray-800
+		.container
+			.row.row-30.row-md-60.text-center
+
+				.col-12
+					h6.subtitle-section.text-primary.wow.fadeIn(data-wow-delay='.1s') Our Clients
+					h2.title-section.ls-3.wow.fadeIn(data-wow-delay='.2s') We Work Worldwide
+
+				.col-12.wow.fadeIn(data-wow-delay='.3s')
+					+img('map-img.png')
+
+
+	include ../sections/_footer-classic
