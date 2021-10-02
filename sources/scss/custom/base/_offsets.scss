@@ -1,0 +1,213 @@
+/** @section Offsets */
+
+// Elements offset
+* + p {
+	margin-top: 15px;
+}
+
+// Headings + Paragraph
+h2 + p,
+.heading-2 + p {
+	margin-top: 30px; //use
+}
+
+// Paragraph + Headings
+p + h2,
+p + .heading-2 {
+	margin-top: 15px;
+}
+
+// Tags + Tags
+p + p {
+	margin-top: 12px;
+}
+
+img + p {
+	margin-top: 15px;
+}
+
+h3 + img {
+	margin-top: 42px;
+}
+
+// Classes
+* + .row {
+	margin-top: 30px;
+}
+
+* + .big {
+	margin-top: 20px;
+}
+
+* + .text-block {
+	margin-top: 30px;
+}
+
+* + .button {
+	margin-top: 40px;
+}
+
+* + .img-offset-top {
+	margin-top: 70px;
+	// Large ≥992px
+	@include media-breakpoint-up(lg) {
+		margin-top: 40px;
+	}
+}
+
+* + .box-counter-text {
+	margin-top: 14px;
+}
+
+* + .button-top {
+	margin-top: 40px;
+	// Extra large ≥1200px
+	@include media-breakpoint-up(xl) {
+		margin-top: 30px;
+	}
+	// Mega large ≥1600px
+	@include media-breakpoint-up(xxl) {
+		margin-top: 40px;
+	}
+}
+
+.button-top-2 {
+	margin-top: 30px;
+	// Medium ≥576px
+	@include media-breakpoint-up(sm) {
+		margin-top: 50px;
+	}
+}
+
+.button-top-3 {
+	margin-top: 30px;
+}
+
+// Classes + Tags
+.row + h3,
+.row + .heading-3 {
+	margin-top: 80px;
+}
+
+// Classes + Classes
+.container + .container {
+	margin-top: 35px;
+}
+
+.row + .row {
+	margin-top: 40px;
+	// Medium ≥768px
+	@include media-breakpoint-up(md) {
+		margin-top: 50px;
+	}
+
+	@include media-breakpoint-up(xl) {
+		margin-top: 0;
+	}
+}
+
+.offset-top-2 + .offset-top-2 {
+	margin-top: 30px;
+	// Medium ≥576px
+	@include media-breakpoint-up(sm) {
+		margin-top: 0;
+	}
+}
+
+.subtitle-section + .title-section {
+	margin-top: 14px;
+}
+
+.title-section + .subtitle-section-3 {
+	margin-top: 12px;
+}
+
+.swiper-caption-subtitle + .swiper-caption-title  {
+	margin-top: 20px;
+	// Extra large ≥1200px
+	@include media-breakpoint-up(xl) {
+		margin-top: 30px;
+	}
+	// Mega large ≥1600px
+	@include media-breakpoint-up(xxl) {
+		margin-top: 50px;
+	}
+}
+
+.swiper-caption-title + .swiper-caption-subtitle-2 {
+	margin-top: 8px;
+	// Medium ≥768px
+	@include media-breakpoint-up(md) {
+		margin-top: 2px;
+	}
+	// Extra large ≥1200px
+	@include media-breakpoint-up(xl) {
+		margin-top: 26px;
+	}
+}
+
+
+
+// Media offsets
+@include media-breakpoint-up(xl) {
+	* + .rd-form {
+		margin-top: 30px;
+	}
+
+	.container + .container {
+		margin-top: 60px;
+	}
+}
+
+//Offset Top
+
+.offset-top-0 {
+	margin-top: 0;
+}
+
+// Large ≥992px
+@include media-breakpoint-up(lg) {
+
+	.offset-top-lg-120 {
+		margin-top: 120px;
+	}
+
+	.offset-top-4 {
+		margin-top: 60px;
+	}
+}
+
+// Extra large ≥1200px
+@include media-breakpoint-up(xl) {
+
+	.offset-top-4 {
+		margin-top: 90px;
+	}
+}
+
+
+.offset-top-3 {
+	margin-top: 30px;
+	// Medium ≥768px
+	@include media-breakpoint-up(md) {
+		margin-top: 64px;
+	}
+}
+
+//Insets
+
+.inset-left-xl {
+	// Large ≥992px
+	@include media-breakpoint-up(lg) {
+		margin-left: -16px;
+	}
+}
+
+.inset-left-lg-30 {
+	// Large ≥992px
+	@include media-breakpoint-up(lg) {
+		margin-left: 30px;
+	}
+}
+
+

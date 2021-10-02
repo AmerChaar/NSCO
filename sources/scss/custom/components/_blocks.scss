@@ -1,0 +1,122 @@
+/** @section Blocks */
+
+%block-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// The block element can be centered horizontally
+//
+.block-center {
+	@extend %block-center;
+}
+
+// Limits block width and block element can be centered horizontally
+//
+.block-sm {
+	@extend %block-center;
+	max-width: 560px;
+}
+
+.block-lg {
+	@extend %block-center;
+	max-width: 768px;
+}
+
+// Block center
+.block-center {
+	padding: 10px;
+
+	&:hover {
+		.block-center-header {
+			background-color: $primary;
+		}
+	}
+}
+
+.block-center-inner {
+}
+
+.block-center-inner-aside {
+}
+
+.block-center-inner-main {
+}
+
+.block-center-title {
+	background-color: $white;
+}
+
+@include media-breakpoint-down(xl) {
+	.block-center {
+		padding: 20px;
+
+		&:hover {
+			.block-center-header {
+				background-color: $white;
+			}
+		}
+	}
+
+	.block-center-header {
+		background-color: $primary;
+	}
+}
+
+//Blocks Left
+
+.block-left-main {
+	// Large ≥1200px
+	@include media-breakpoint-up(xl) {
+		padding-left: 28.8%;
+	}
+}
+
+.block-left-custom {
+	// Extra large ≥1200px
+	@include media-breakpoint-up(xl) {
+		margin-left: 20%;
+	}
+	// Large ≥1600
+	@include media-breakpoint-up(xxl) {
+		margin-left: -5%;
+	}
+}
+
+//Blocks
+
+.block-3 {
+	max-width: 440px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+// Medium ≥992px
+@include media-breakpoint-up(lg) {
+	.block-3 {
+		max-width: 100%;
+		margin-right: 0;
+		margin-left: 0;
+	}
+}
+
+// Large ≥992px
+@include media-breakpoint-up(lg) {
+	.block-1 {
+		max-width: 440px;
+	}
+	.block-2 {
+		max-width: 340px;
+	}
+}
+
+.block-4 {
+	// Extra large ≥1200px
+	@include media-breakpoint-up(xl) {
+		max-width: 370px;
+	}
+	// Mega large ≥1600px
+	@include media-breakpoint-up(xxl) {
+		max-width: 470px;
+	}
+}

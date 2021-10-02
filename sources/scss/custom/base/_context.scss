@@ -1,0 +1,25 @@
+/** @section Context Styles */
+
+%context-dark {
+
+	#{headings()} {
+		color: $white;
+	}
+	.swiper-caption-title {
+		color: $primary;
+	}
+	.text-primary {
+		color: $primary;
+	}
+	.button-primary-outline {
+		color: $primary;
+	}
+}
+
+%context-light {
+	color: $body-color;
+
+	#{headings()} {
+		color: $headings-color;
+	}
+}

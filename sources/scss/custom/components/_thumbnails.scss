@@ -1,0 +1,158 @@
+/** @section Thumbnails */
+
+// Figure Light
+.figure-light figcaption {
+	padding-top: 10px;
+	color: $gray-400;
+}
+
+
+//
+// Thumbnail Classic
+//
+
+.thumbnail-classic {
+	position: relative;
+	max-width: 300px;
+	margin-right: auto;
+	margin-left: auto;
+	// Medium ≥768px
+	@include media-breakpoint-up(md) {
+		max-width: 100%;
+		margin-right: 0;
+		margin-left: 0;
+	}
+}
+
+.thumbnail-classic-figure {
+	display: flex;
+	flex-shrink: 0;
+	flex-grow: 1;
+
+	img {
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+.thumbnail-classic-caption {
+	background: rgba($black, .25);
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.thumbnail-classic-button {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0;
+	line-height: 0;
+
+	.button {
+		font-size: 54px;
+		text-align: center;
+		padding: 20px;
+		border: none;
+	}
+
+	img {	display: none; }
+}
+
+.thumbnail-classic-button {
+	a {
+		color: $white;
+	}
+}
+
+.thumbnail-classic-button:hover {
+	a {
+		color: $primary;
+	}
+}
+
+
+.thumbnail-classic-button + .thumbnail-classic-button { margin-left: 16px; }
+
+* + .thumbnail-classic-button-wrap { margin-top: 15px; }
+
+
+.desktop {
+	// Large ≥992px
+	@include media-breakpoint-up(lg) {
+
+		.thumbnail-classic {
+			overflow: hidden;
+		}
+
+		.thumbnail-classic-caption {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: transparent;
+			pointer-events: none;
+			z-index: 1;
+
+			&::before {
+				position: absolute;
+				content: '';
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background: rgba($black, .45);
+				transform: scale(.8);
+				transition: all .3s ease;
+				opacity: 0;
+				z-index: -1;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				display: inline-block;
+				top: 10px;
+				right: 10px;
+				bottom: 10px;
+				left: 10px;
+				border: 1px solid rgba(255, 255, 255, 0.5);
+				z-index: 1;
+				opacity: 0;
+				transition: all .4s ease;
+				transform: scale(.8);
+			}
+
+			> div {
+				pointer-events: auto;
+			}
+		}
+
+		.thumbnail-classic-button {
+			transition: all .4s ease;
+			opacity: 0;
+		}
+
+		.thumbnail-classic:hover {
+
+			.thumbnail-classic-caption::before,
+			.thumbnail-classic-caption::after,
+			.thumbnail-classic-button {
+				transform: none;
+				opacity: 1;
+			}
+
+		}
+
+		* + .thumbnail-classic-button-wrap { margin-top: 24px; }
+	}
+}

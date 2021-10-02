@@ -1,0 +1,113 @@
+/** @section Backgrounds */
+
+.context-dark {
+	@extend %context-dark;
+}
+
+%context-dark {
+	// Logo
+	.brand {
+		.brand-logo-dark {
+			display: none;
+		}
+
+		.brand-logo-light {
+			display: block;
+		}
+	}
+}
+
+%context-light {
+	// Logo
+	.brand {
+		.brand-logo-dark {
+			display: block;
+		}
+
+		.brand-logo-light {
+			display: none;
+		}
+	}
+}
+
+
+// Light Backgrounds
+.bg-default {
+	@include bg-behaviour($body-bg);
+}
+
+.bg-white {
+	@include bg-behaviour($white);
+}
+
+
+.bg-gray-100 {
+	@include bg-behaviour($gray-100);
+}
+
+.bg-primary {
+	@include bg-behaviour($primary);
+}
+
+
+	// Dark Backgrounds
+.bg-gray-700 {
+	@extend %context-dark;
+	@include bg-behaviour($gray-700);
+}
+// Dark Backgrounds
+.bg-gray-800 {
+	@extend %context-dark;
+	@include bg-behaviour($gray-800);
+}
+
+
+.bg-default + .bg-default {
+	// Large <991px
+	@include media-breakpoint-down(md) {
+		padding-top: 0;
+	}
+}
+
+// Accent Backgrounds
+.bg-primary {
+	& + & {
+		padding-top: 0;
+	}
+}
+
+
+// Background Image
+.bg-image {
+	background-size: cover;
+	background-position: center;
+}
+
+
+// Desktop only
+html:not(.tablet):not(.mobile) {
+	.bg-fixed {
+		@include media-breakpoint-up(lg) {
+			background-attachment: fixed;
+		}
+	}
+}
+
+
+//Custom Backgrounds
+
+.bg-custom-gray {
+	// Large ≥992px
+	@include media-breakpoint-up(lg) {
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 62%;
+			height: 100%;
+			background: $gray-400;
+		}
+	}
+}

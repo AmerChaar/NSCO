@@ -1,0 +1,127 @@
+/** @section Text styling */
+
+// Text styles
+.text-italic {
+	font-style: italic;
+}
+
+.text-normal {
+	font-style: normal;
+}
+
+// Text decoration
+.text-underline {
+	text-decoration: underline;
+}
+
+.text-strike {
+	text-decoration: line-through;
+}
+
+// Text weight
+.font-weight-thin {
+	font-weight: 100;
+}
+
+.font-weight-light {
+	font-weight: 300;
+}
+
+.font-weight-regular {
+	font-weight: 400;
+}
+
+.font-weight-medium {
+	font-weight: 500;
+}
+
+.font-weight-sbold {
+	font-weight: 600;
+}
+
+.font-weight-bold {
+	font-weight: 700;
+}
+
+.font-weight-ubold {
+	font-weight: 900;
+}
+
+// Text spacing
+.text-spacing-0 {
+	letter-spacing: 0;
+}
+
+.text-primary {
+	color: $primary;
+}
+
+.text-white {
+	color: $white;
+}
+
+.text-gray-800 {
+	color: $gray-800;
+}
+
+//Text |Image
+.text-img {
+	display: inline-block;
+	overflow: hidden;
+	font-size: 180px;
+	line-height: 85%;
+	font-weight: 900;
+	height: 142px;
+	font-family: $font-family-sec;
+	color: $gray-800;
+
+
+	@include media-breakpoint-up(md) {
+		font-size: 250px;
+		height: 200px;
+	}
+
+	// Large ≥992px
+	@include media-breakpoint-up(lg) {
+		letter-spacing: .05em;
+	}
+}
+
+@supports (-webkit-background-clip: text) {
+	.text-img {
+		-webkit-text-fill-color: transparent;
+		background: -webkit-linear-gradient(transparent, transparent);
+		background: -o-linear-gradient(transparent, transparent);
+		background: url(../images/text-image.jpg) repeat;
+		-webkit-background-clip: text;
+		background-position-y: 40%;
+		animation: imgPos 5s linear normal infinite paused;
+
+		> span { pointer-events: none }
+
+		&:hover {
+			animation-play-state: running;
+			color: red;
+		}
+
+		// Medium ≥576px
+		@include media-breakpoint-up(sm) {
+			background-position-y: 22%;
+		}
+	}
+}
+
+
+@keyframes imgPos {
+	0% {
+		background-position-x: 0
+	}
+
+	50% {
+		background-position-x: 100%
+	}
+
+	100% {
+		background-position-x: 0
+	}
+}

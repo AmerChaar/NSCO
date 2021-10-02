@@ -1,0 +1,68 @@
+
+//Decorative Line
+.line-decorative {
+
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: calc(50% - 2px);
+		height: 100px;
+		width: 1px;
+		background: $white;
+	}
+}
+
+
+//Decorative Word
+.decorative-word {
+	position: absolute;
+	display: none;
+	top: 28%;
+	left: 34%;
+	transform: translate(-50%, -50%);
+	font-family: $font-family-third;
+	font-size: 170px;
+	line-height: 1;
+	letter-spacing: 0;
+	font-weight: 700;
+	color: rgba($gray-800, .7);
+
+	.rotate {
+		transform: rotate(180deg);
+		line-height: 1.52em;
+		padding-right: 20px;
+	}
+
+	// Extra large ≥1200px
+	@include media-breakpoint-up(xl) {
+		display: flex;
+	}
+	// Mega large ≥1600px
+	@include media-breakpoint-up(xxl) {
+		font-size: 220px;
+	}
+}
+
+//Decorative Border
+.decorative-border {
+	content: '';
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	left: 0;
+	width: 45%;
+	height: 7px;
+	background: $primary;
+	&::before {
+		content: '';
+		position: absolute;
+		z-index: 1;
+		bottom: 0;
+		left: 100%;
+		width: 140%;
+		height: 7px;
+		background: rgba($white, .5);
+	}
+}
